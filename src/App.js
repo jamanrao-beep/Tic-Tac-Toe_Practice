@@ -52,7 +52,7 @@ export default function FirstPage() {
 }
 
 export function Counter() {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     return (
         <div>
@@ -60,6 +60,10 @@ export function Counter() {
             <button onClick={() => setCount(count + 1)}>
                 Click me
             </button>
+            {count > 0 && (
+                <div>Button has been clicked</div>
+            )}
+
         </div>
     );
 }
